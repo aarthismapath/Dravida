@@ -24,6 +24,12 @@
   --color-olive: #5C6438;          /* olive green */
   --color-teal: #3A5454;           /* dark teal */
   --color-navy: #2C3544;           /* deep navy */
+  --color-burgundy: #5A1A2A;      /* deep burgundy */
+  --color-burgundy-light: #7A2840; /* burgundy highlight */
+  --color-burgundy-dim: rgba(90, 26, 42, 0.15);
+  --color-forest: #1A2E1A;        /* dark forest green */
+  --color-forest-light: #2A4428;  /* forest highlight */
+  --color-forest-dim: rgba(26, 46, 26, 0.12);
 
   /* Semantic aliases — keeps rest of CSS clean */
   --color-gold: var(--color-accent);
@@ -456,7 +462,24 @@ a:focus-visible {
   margin-bottom: var(--space-lg);
 }
 
+.logo-sparkle-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.sparkle-canvas {
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .hero-logo-img {
+  position: relative;
+  z-index: 0;
   height: clamp(100px, 18vw, 180px);
   width: auto;
   filter: brightness(0) invert(1);
@@ -512,7 +535,13 @@ a:focus-visible {
    INTRO / PHILOSOPHY
    ============================================ */
 .section-intro {
-  background-color: var(--color-charcoal);
+  background: linear-gradient(
+    160deg,
+    var(--color-charcoal) 0%,
+    #241419 45%,
+    #1E1218 55%,
+    var(--color-charcoal) 100%
+  );
   padding: var(--space-2xl) 0;
   text-align: center;
 }
@@ -635,7 +664,13 @@ a:focus-visible {
    MENU
    ============================================ */
 .section-menu {
-  background-color: var(--color-charcoal);
+  background: linear-gradient(
+    175deg,
+    var(--color-charcoal) 0%,
+    #1A2218 40%,
+    #172016 60%,
+    var(--color-charcoal) 100%
+  );
   color: var(--color-cream);
   padding: var(--space-2xl) 0;
 }
@@ -725,7 +760,13 @@ a:focus-visible {
    GALLERY — Immersive dark mosaic grid
    ============================================ */
 .section-gallery {
-  background-color: var(--color-charcoal);
+  background: linear-gradient(
+    175deg,
+    var(--color-charcoal) 0%,
+    #1E1520 40%,
+    #1A1320 60%,
+    var(--color-charcoal) 100%
+  );
   padding: var(--space-2xl) 0;
 }
 
@@ -837,7 +878,12 @@ a:focus-visible {
 .events-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(14, 12, 10, 0.7);
+  background: linear-gradient(
+    160deg,
+    rgba(14, 12, 10, 0.75) 0%,
+    rgba(90, 26, 42, 0.55) 50%,
+    rgba(14, 12, 10, 0.8) 100%
+  );
   z-index: 1;
 }
 
@@ -852,6 +898,13 @@ a:focus-visible {
 
 .events-content .section-title {
   color: var(--color-cream);
+}
+
+.events-subtitle {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.8;
 }
 
 .events-body {
@@ -1066,6 +1119,12 @@ details[open] .faq-icon::after {
   color: var(--color-accent);
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.btn-gift-card {
+  margin-top: var(--space-sm);
+  font-size: 0.625rem;
+  padding: 0.75rem 2rem;
 }
 
 /* ============================================

@@ -185,6 +185,136 @@
     );
   }
 
+  // ── Logo Sparkle Animation ──
+  function initSparkle() {
+    var canvas = document.querySelector(".sparkle-canvas");
+    if (!canvas) return;
+
+    var prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) return;
+
+    var ctx = canvas.getContext("2d");
+    var particles = [];
+    var maxParticles = 18;
+    var dpr = window.devicePixelRatio || 1;
+
+    function resize() {
+      var rect = canvas.parentElement.getBoundingClientRect();
+      canvas.width = rect.width * 1.8 * dpr;
+      canvas.height = rect.height * 1.8 * dpr;
+      ctx.scale(dpr, dpr);
+    }
+
+    resize();
+    window.addEventListener("resize", resize);
+
+    function createParticle() {
+      var cx = canvas.width / dpr / 2;
+      var cy = canvas.height / dpr / 2;
+      var angle = Math.random() * Math.PI * 2;
+      var radiusX = (canvas.width / dpr / 2) * (0.35 + Math.random() * 0.55);
+      var radiusY = (canvas.height / dpr / 2) * (0.3 + Math.random() * 0.5);
+
+      return {
+        x: cx + Math.cos(angle) * radiusX,
+        y: cy + Math.sin(angle) * radiusY,
+        size: Math.random() * 2.5 + 0.8,
+        opacity: 0,
+        maxOpacity: Math.random() * 0.7 + 0.3,
+        fadeIn: true,
+        speed: Math.random() * 0.008 + 0.004,
+        life: 0,
+        maxLife: Math.random() * 180 + 80,
+        twinkleSpeed: Math.random() * 0.06 + 0.02,
+        twinklePhase: Math.random() * Math.PI * 2,
+        isStar: Math.random() > 0.5,
+      };
+    }
+
+    function drawStar(x, y, size, opacity) {
+      ctx.save();
+      ctx.globalAlpha = opacity;
+      ctx.fillStyle = "#C27832";
+      ctx.shadowColor = "#C27832";
+      ctx.shadowBlur = size * 3;
+
+      // 4-point star
+      ctx.beginPath();
+      for (var i = 0; i < 4; i++) {
+        var a = (i * Math.PI) / 2;
+        ctx.moveTo(x, y);
+        ctx.lineTo(
+          x + Math.cos(a - 0.15) * size * 0.4,
+          y + Math.sin(a - 0.15) * size * 0.4
+        );
+        ctx.lineTo(x + Math.cos(a) * size, y + Math.sin(a) * size);
+        ctx.lineTo(
+          x + Math.cos(a + 0.15) * size * 0.4,
+          y + Math.sin(a + 0.15) * size * 0.4
+        );
+      }
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function drawDot(x, y, size, opacity) {
+      ctx.save();
+      ctx.globalAlpha = opacity;
+      ctx.fillStyle = "#F7F3EE";
+      ctx.shadowColor = "#F7F3EE";
+      ctx.shadowBlur = size * 4;
+      ctx.beginPath();
+      ctx.arc(x, y, size * 0.5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
+
+      // Spawn particles
+      if (particles.length < maxParticles && Math.random() > 0.88) {
+        particles.push(createParticle());
+      }
+
+      for (var i = particles.length - 1; i >= 0; i--) {
+        var p = particles[i];
+        p.life++;
+
+        // Fade in/out
+        if (p.life < 30) {
+          p.opacity = (p.life / 30) * p.maxOpacity;
+        } else if (p.life > p.maxLife - 30) {
+          p.opacity = ((p.maxLife - p.life) / 30) * p.maxOpacity;
+        }
+
+        // Twinkle
+        var twinkle =
+          Math.sin(p.life * p.twinkleSpeed + p.twinklePhase) * 0.3 + 0.7;
+        var finalOpacity = p.opacity * twinkle;
+
+        if (p.isStar) {
+          drawStar(p.x, p.y, p.size, finalOpacity);
+        } else {
+          drawDot(p.x, p.y, p.size, finalOpacity);
+        }
+
+        if (p.life >= p.maxLife) {
+          particles.splice(i, 1);
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    // Delay start slightly so it feels organic
+    setTimeout(function () {
+      animate();
+    }, 600);
+  }
+
   // ── Init All ──
   document.addEventListener("DOMContentLoaded", function () {
     initHero();
@@ -192,5 +322,6 @@
     initNavbar();
     initMobileNav();
     initImageBand();
+    initSparkle();
   });
 })();

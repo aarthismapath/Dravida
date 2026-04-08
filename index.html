@@ -29,7 +29,7 @@
       "postalCode": "10003",
       "addressCountry": "US"
     },
-    "openingHours": "Mo-Su 17:00-23:00",
+    "openingHours": "Mo-Su 16:30-22:30",
     "servesCuisine": ["Indian", "South Asian"],
     "priceRange": "$$$",
     "email": "info@dravidanyc.com",
@@ -88,11 +88,14 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-logo-mark reveal" data-delay="0">
-        <img
-          src="images/logo/Dravida_signage_Indian_Diaspora_final_1-01.png"
-          alt="Dravida - Aarthi Sampath's Indian Diaspora"
-          class="hero-logo-img"
-        />
+        <div class="logo-sparkle-wrapper">
+          <canvas class="sparkle-canvas" aria-hidden="true"></canvas>
+          <img
+            src="images/logo/Dravida_signage_Indian_Diaspora_final_1-01.png"
+            alt="Dravida - Aarthi Sampath's Indian Diaspora"
+            class="hero-logo-img"
+          />
+        </div>
       </div>
       <p class="hero-location reveal" data-delay="400">New York City</p>
       <a href="https://resy.com" class="btn btn-hero reveal" data-delay="800" target="_blank" rel="noopener noreferrer">
@@ -111,8 +114,7 @@
     <section class="section section-intro" aria-label="Philosophy">
       <div class="container">
         <blockquote class="intro-quote reveal">
-          <p>&ldquo;Inspired by the movement of people, spices, and stories&mdash;our food is deeply rooted yet ever-evolving.&rdquo;</p>
-          <footer class="intro-attribution">&mdash; Chef Aarthi Sampath</footer>
+          <p>An evolving Indian and South Asian diaspora menu &amp; experience&mdash;rooted in history, made for today.</p>
         </blockquote>
       </div>
     </section>
@@ -266,11 +268,11 @@
       <div class="events-overlay"></div>
       <div class="container events-content">
         <p class="section-label reveal">Celebrate With Us</p>
-        <h2 class="section-title reveal">Private Events</h2>
+        <h2 class="section-title reveal">Jam &amp; Jaggery Lounge<br><span class="events-subtitle">&amp; Private Events Space</span></h2>
         <p class="events-body reveal">
-          From intimate gatherings in our private dining room to full restaurant buyouts&mdash;multi-course seated menus, cocktail receptions with passed plates, and everything in between.
+          From intimate gatherings in our private lounge to full restaurant buyouts&mdash;multi-course seated menus, cocktail receptions with passed plates, and everything in between.
         </p>
-        <a href="mailto:aarthi@dravidanyc.com?subject=Private%20Event%20Inquiry" class="btn btn-hero reveal">
+        <a href="mailto:info@dravidanyc.com?subject=Private%20Event%20Inquiry" class="btn btn-hero reveal">
           Inquire About Events
         </a>
       </div>
@@ -285,7 +287,7 @@
           <div class="visit-block reveal">
             <h3 class="visit-heading">Hours</h3>
             <p class="visit-detail">Monday &ndash; Sunday</p>
-            <p class="visit-highlight">5:00&nbsp;PM &ndash; 11:00&nbsp;PM</p>
+            <p class="visit-highlight">4:30&nbsp;PM &ndash; 10:30&nbsp;PM</p>
             <p class="visit-muted">Open 7 days a week</p>
           </div>
           <div class="visit-block reveal">
@@ -299,7 +301,6 @@
           <div class="visit-block reveal">
             <h3 class="visit-heading">Contact</h3>
             <p><a href="mailto:info@dravidanyc.com" class="visit-action">info@dravidanyc.com</a></p>
-            <p><a href="mailto:aarthi@dravidanyc.com" class="visit-action">aarthi@dravidanyc.com</a></p>
           </div>
           <div class="visit-block reveal">
             <h3 class="visit-heading">Reservations</h3>
@@ -355,7 +356,7 @@
               <span class="faq-icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>Yes! We offer private dining and full restaurant buyouts. Contact us at <a href="mailto:aarthi@dravidanyc.com">aarthi@dravidanyc.com</a> for details.</p>
+              <p>Yes! We offer private dining and full restaurant buyouts. Contact us at <a href="mailto:info@dravidanyc.com">info@dravidanyc.com</a> for details.</p>
             </div>
           </details>
 
@@ -365,7 +366,7 @@
               <span class="faq-icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>We are open seven days a week, 5:00&nbsp;PM to 11:00&nbsp;PM.</p>
+              <p>We are open seven days a week, 4:30&nbsp;PM to 10:30&nbsp;PM.</p>
             </div>
           </details>
 
@@ -375,7 +376,7 @@
               <span class="faq-icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>Please contact us at <a href="mailto:info@dravidanyc.com">info@dravidanyc.com</a> for details on our BYOB policy.</p>
+              <p>Yes. Our corkage fee is $50 per 750ml, with a maximum of one bottle per person. Please note, we do not allow corkage for wines that appear on our list.</p>
             </div>
           </details>
 
@@ -385,7 +386,7 @@
               <span class="faq-icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>Please contact us at <a href="mailto:info@dravidanyc.com">info@dravidanyc.com</a> for the latest on takeout and delivery options.</p>
+              <p>At the moment, we don&rsquo;t offer takeout or delivery.</p>
             </div>
           </details>
 
@@ -395,7 +396,8 @@
               <span class="faq-icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>Please reach out to <a href="mailto:info@dravidanyc.com">info@dravidanyc.com</a> for information about gift cards.</p>
+              <p>Yes! You can purchase a Dravida gift card directly online.</p>
+              <a href="#" class="btn btn-outline btn-gift-card" target="_blank" rel="noopener noreferrer">Buy a Gift Card</a>
             </div>
           </details>
 
@@ -428,12 +430,11 @@
             <h3 class="footer-col-title">Visit</h3>
             <p>211 1st Ave</p>
             <p>New York, NY&nbsp;10003</p>
-            <p>Daily, 5&ndash;11&nbsp;PM</p>
+            <p>Daily, 4:30&ndash;10:30&nbsp;PM</p>
           </div>
           <div class="footer-col">
             <h3 class="footer-col-title">Contact</h3>
             <p><a href="mailto:info@dravidanyc.com">info@dravidanyc.com</a></p>
-            <p><a href="mailto:aarthi@dravidanyc.com">aarthi@dravidanyc.com</a></p>
           </div>
           <div class="footer-col">
             <h3 class="footer-col-title">Follow</h3>
