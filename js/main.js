@@ -336,6 +336,25 @@
   }
 
   // ── Init All ──
+  // ── Mobile Video Autoplay ──
+  function initMobileVideo() {
+    var video = document.querySelector(".hero-video--mobile");
+    if (!video) return;
+    if (window.innerWidth > 640) return;
+
+    // Force play — some mobile browsers need a programmatic call
+    var playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(function () {
+        // Autoplay blocked — try again on first user interaction
+        document.addEventListener("touchstart", function onTouch() {
+          video.play();
+          document.removeEventListener("touchstart", onTouch);
+        }, { once: true });
+      });
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initHero();
     initScrollReveal();
@@ -344,5 +363,6 @@
     initImageBand();
     initSparkle();
     initMobileReserve();
+    initMobileVideo();
   });
 })();
