@@ -78,12 +78,15 @@
   <!-- Hero Section — Cinematic full-bleed -->
   <header id="hero" class="hero">
     <div class="hero-media">
-      <img
-        src="images/gallery/slider.jpeg"
-        alt="Dravida restaurant bar with warm ambient lighting, brass shelves, and exposed brick"
-        class="hero-image hero-image--desktop"
-        fetchpriority="high"
-      />
+      <picture>
+        <source srcset="images/gallery/slider.webp" type="image/webp" />
+        <img
+          src="images/gallery/slider.jpeg"
+          alt="Dravida restaurant bar with warm ambient lighting, brass shelves, and exposed brick"
+          class="hero-image hero-image--desktop"
+          fetchpriority="high"
+        />
+      </picture>
       <video
         class="hero-video hero-video--mobile"
         autoplay
@@ -92,7 +95,7 @@
         playsinline
         webkit-playsinline
         preload="auto"
-        poster="images/gallery/slider.jpeg"
+        poster="images/gallery/slider.webp"
         aria-hidden="true"
       >
         <source src="images/video/hero-mobile.webm" type="video/webm">
@@ -104,11 +107,14 @@
       <div class="hero-logo-mark reveal" data-delay="0">
         <div class="logo-sparkle-wrapper">
           <canvas class="sparkle-canvas" aria-hidden="true"></canvas>
-          <img
-            src="images/logo/Dravida_signage_color.png"
-            alt="Dravida - Indian Diaspora by Aarthi Sampath"
-            class="hero-logo-img hero-logo-img--color"
-          />
+          <picture>
+            <source srcset="images/logo/Dravida_signage_color.webp" type="image/webp" />
+            <img
+              src="images/logo/Dravida_signage_color.png"
+              alt="Dravida - Indian Diaspora by Aarthi Sampath"
+              class="hero-logo-img hero-logo-img--color"
+            />
+          </picture>
         </div>
       </div>
       <p class="hero-location reveal" data-delay="400">New York City</p>
@@ -139,12 +145,15 @@
         <div class="about-grid">
           <div class="about-image-wrapper reveal reveal-left">
             <div class="about-image-frame">
-              <img
-                src="images/gallery/dining-full-view.jpeg"
-                alt="Dravida dining room with coconut shell chandeliers and warm brick interior"
-                class="about-image"
-                loading="lazy"
-              />
+              <picture>
+                <source srcset="images/gallery/dining-full-view.webp" type="image/webp" />
+                <img
+                  src="images/gallery/dining-full-view.jpeg"
+                  alt="Dravida dining room with coconut shell chandeliers and warm brick interior"
+                  class="about-image"
+                  loading="lazy"
+                />
+              </picture>
             </div>
             <div class="about-image-accent" aria-hidden="true"></div>
           </div>
@@ -171,11 +180,11 @@
     <!-- Horizontal Image Band -->
     <div class="image-band" aria-label="Restaurant atmosphere">
       <div class="image-band-track">
-        <img src="images/gallery/dining-room-wide.jpeg" alt="Dravida dining room with chandeliers and brick walls" class="band-img" loading="lazy">
-        <img src="images/gallery/personal-photograph.jpeg" alt="Personal photograph among pussy willows" class="band-img" loading="lazy">
-        <img src="images/gallery/private-bar.jpeg" alt="Private bar area with pendant lamps and stools" class="band-img" loading="lazy">
-        <img src="images/gallery/dining-full-view.jpeg" alt="Full view of Dravida dining room" class="band-img" loading="lazy">
-        <img src="images/gallery/window-lettering.jpeg" alt="Dravida gold window lettering" class="band-img" loading="lazy">
+        <picture><source srcset="images/gallery/dining-room-wide.webp" type="image/webp" /><img src="images/gallery/dining-room-wide.jpeg" alt="Dravida dining room with chandeliers and brick walls" class="band-img" loading="lazy"></picture>
+        <picture><source srcset="images/gallery/personal-photograph.webp" type="image/webp" /><img src="images/gallery/personal-photograph.jpeg" alt="Personal photograph among pussy willows" class="band-img" loading="lazy"></picture>
+        <picture><source srcset="images/gallery/private-bar.webp" type="image/webp" /><img src="images/gallery/private-bar.jpeg" alt="Private bar area with pendant lamps and stools" class="band-img" loading="lazy"></picture>
+        <picture><source srcset="images/gallery/dining-full-view.webp" type="image/webp" /><img src="images/gallery/dining-full-view.jpeg" alt="Full view of Dravida dining room" class="band-img" loading="lazy"></picture>
+        <picture><source srcset="images/gallery/window-lettering.webp" type="image/webp" /><img src="images/gallery/window-lettering.jpeg" alt="Dravida gold window lettering" class="band-img" loading="lazy"></picture>
       </div>
     </div>
 
@@ -290,7 +299,7 @@
       <div class="gallery-grid">
         <!-- Row 1: Hero wide image -->
         <figure class="gallery-item gallery-item--hero reveal">
-          <img src="images/gallery/chandeliers-dining.jpeg" alt="Coconut shell chandeliers above dining tables" loading="lazy">
+          <picture><source srcset="images/gallery/chandeliers-dining.webp" type="image/webp" /><img src="images/gallery/chandeliers-dining.jpeg" alt="Coconut shell chandeliers above dining tables" loading="lazy"></picture>
           <figcaption class="gallery-caption">
             <span class="gallery-caption-label">Interior</span>
             <span class="gallery-caption-title">The Chandeliers</span>
@@ -299,21 +308,21 @@
 
         <!-- Row 2: Three equal columns -->
         <figure class="gallery-item reveal">
-          <img src="images/gallery/booth-seating.jpeg" alt="Cozy leather booth with warm lantern light" loading="lazy">
+          <picture><source srcset="images/gallery/booth-seating.webp" type="image/webp" /><img src="images/gallery/booth-seating.jpeg" alt="Cozy leather booth with warm lantern light" loading="lazy"></picture>
           <figcaption class="gallery-caption">
             <span class="gallery-caption-label">Seating</span>
             <span class="gallery-caption-title">The Booth</span>
           </figcaption>
         </figure>
         <figure class="gallery-item reveal">
-          <img src="images/gallery/signage-outdoor.jpeg" alt="Dravida outdoor signage in gold" loading="lazy">
+          <picture><source srcset="images/gallery/signage-outdoor.webp" type="image/webp" /><img src="images/gallery/signage-outdoor.jpeg" alt="Dravida outdoor signage in gold" loading="lazy"></picture>
           <figcaption class="gallery-caption">
             <span class="gallery-caption-label">Exterior</span>
             <span class="gallery-caption-title">The Signage</span>
           </figcaption>
         </figure>
         <figure class="gallery-item reveal">
-          <img src="images/gallery/private-bar.jpeg" alt="Private bar with pendant lamps and art" loading="lazy">
+          <picture><source srcset="images/gallery/private-bar.webp" type="image/webp" /><img src="images/gallery/private-bar.jpeg" alt="Private bar with pendant lamps and art" loading="lazy"></picture>
           <figcaption class="gallery-caption">
             <span class="gallery-caption-label">Bar</span>
             <span class="gallery-caption-title">The Lounge</span>
@@ -322,14 +331,14 @@
 
         <!-- Row 3: Two images, asymmetric -->
         <figure class="gallery-item gallery-item--wide reveal">
-          <img src="images/gallery/spice-mural.jpeg" alt="Hand-painted spice mural with leather banquette" loading="lazy">
+          <picture><source srcset="images/gallery/spice-mural.webp" type="image/webp" /><img src="images/gallery/spice-mural.jpeg" alt="Hand-painted spice mural with leather banquette" loading="lazy"></picture>
           <figcaption class="gallery-caption">
             <span class="gallery-caption-label">Art</span>
             <span class="gallery-caption-title">The Spice Mural</span>
           </figcaption>
         </figure>
         <figure class="gallery-item reveal">
-          <img src="images/gallery/dining-room-wide.jpeg" alt="Wide view of Dravida dining room with chandeliers and warm brick walls" loading="lazy">
+          <picture><source srcset="images/gallery/dining-room-wide.webp" type="image/webp" /><img src="images/gallery/dining-room-wide.jpeg" alt="Wide view of Dravida dining room with chandeliers and warm brick walls" loading="lazy"></picture>
           <figcaption class="gallery-caption">
             <span class="gallery-caption-label">Dining</span>
             <span class="gallery-caption-title">The Room</span>
@@ -341,12 +350,15 @@
     <!-- Private Events Section — Cinematic parallax -->
     <section id="events" class="section section-events">
       <div class="events-media">
-        <img
-          src="images/gallery/lounge-area.jpeg"
-          alt="Dravida private lounge with bar seating and intimate lighting"
-          class="events-image"
-          loading="lazy"
-        />
+        <picture>
+          <source srcset="images/gallery/lounge-area.webp" type="image/webp" />
+          <img
+            src="images/gallery/lounge-area.jpeg"
+            alt="Dravida private lounge with bar seating and intimate lighting"
+            class="events-image"
+            loading="lazy"
+          />
+        </picture>
       </div>
       <div class="events-overlay"></div>
       <div class="container events-content">
