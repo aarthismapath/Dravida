@@ -669,7 +669,7 @@ a:focus-visible {
 }
 
 /* ============================================
-   MENU
+   MENU — Editorial centered layout
    ============================================ */
 .section-menu {
   background: linear-gradient(
@@ -693,76 +693,153 @@ a:focus-visible {
 }
 
 .menu-header {
-  max-width: 600px;
-  margin-bottom: var(--space-xl);
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto var(--space-xl);
 }
 
 .menu-intro {
   color: var(--color-light);
   opacity: 0.7;
   font-size: 0.9375rem;
+  line-height: 1.8;
 }
 
-.menu-columns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-lg) var(--space-xl);
+/* Showcase container */
+.menu-showcase {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-lg);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(42, 68, 40, 0.25);
+  position: relative;
 }
 
-.menu-column {
+/* Corner accents */
+.menu-showcase::before,
+.menu-showcase::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: var(--color-forest-light);
+  border-style: solid;
+  opacity: 0.4;
+}
+
+.menu-showcase::before {
+  top: -1px;
+  left: -1px;
+  border-width: 1px 0 0 1px;
+}
+
+.menu-showcase::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 1px 1px 0;
+}
+
+/* Ornament dividers */
+.menu-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
   padding: var(--space-md) 0;
+}
+
+.menu-ornament-line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-forest-light), transparent);
+  opacity: 0.5;
+}
+
+.menu-ornament-diamond {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-forest-light);
+  transform: rotate(45deg);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* Categories — stacked, centered */
+.menu-categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-category {
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  max-width: 480px;
+}
+
+.menu-category-icon {
+  margin-bottom: var(--space-sm);
+  color: var(--color-gold);
+  opacity: 0.5;
 }
 
 .menu-category-title {
   font-family: var(--font-heading);
-  font-size: 1.75rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 400;
   color: var(--color-cream);
   margin-bottom: var(--space-sm);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
 }
 
-.menu-divider {
-  width: 40px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-forest-light), transparent);
-  margin-bottom: var(--space-md);
-  opacity: 0.7;
-}
-
-.menu-item {
-  padding: var(--space-sm) 0;
-}
-
-.menu-item-name {
-  display: block;
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 0.9375rem;
-  color: var(--color-cream);
-  margin-bottom: 0.25rem;
-  letter-spacing: 0.02em;
-}
-
-.menu-item-desc {
-  display: block;
-  font-size: 0.8125rem;
-  color: var(--color-muted);
-  font-style: italic;
+.menu-category-desc {
   font-family: var(--font-heading);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   font-weight: 300;
-  line-height: 1.6;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--color-light);
+  opacity: 0.65;
+}
+
+/* Divider between categories */
+.menu-category-divider {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  opacity: 0.3;
+}
+
+/* Footer area */
+.menu-footer {
+  text-align: center;
+  margin-top: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
 }
 
 .menu-note {
-  margin-top: var(--space-xl);
   font-size: 0.8125rem;
   color: var(--color-muted);
   font-style: italic;
-  text-align: center;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.btn-menu-cta {
+  background: transparent;
+  color: var(--color-cream);
+  border: 1px solid rgba(42, 68, 40, 0.5);
+  letter-spacing: 0.15em;
+  transition: all var(--duration-fast) ease;
+}
+
+.btn-menu-cta:hover {
+  background-color: var(--color-forest-light);
+  border-color: var(--color-forest-light);
+  color: var(--color-cream);
+  opacity: 1;
 }
 
 /* ============================================
@@ -1569,8 +1646,8 @@ details[open] .faq-icon::after {
     display: none;
   }
 
-  .menu-columns {
-    grid-template-columns: 1fr 1fr;
+  .menu-showcase {
+    padding: var(--space-md);
   }
 
   .gallery-mosaic {
@@ -1688,9 +1765,19 @@ details[open] .faq-icon::after {
     letter-spacing: 0.08em;
   }
 
-  .menu-columns {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
+  .menu-showcase {
+    padding: var(--space-sm);
+    border: none;
+    background: none;
+  }
+
+  .menu-showcase::before,
+  .menu-showcase::after {
+    display: none;
+  }
+
+  .menu-category {
+    padding: var(--space-md) var(--space-xs);
   }
 
   .gallery-mosaic {
