@@ -315,6 +315,31 @@
     }, 600);
   }
 
+  // ── Mobile Reserve Bar — show after scrolling past hero ──
+  function initMobileReserve() {
+    var hero = document.getElementById("hero");
+    var reserveBar = document.querySelector(".mobile-reserve");
+
+    if (!hero || !reserveBar) return;
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            reserveBar.classList.remove("visible");
+          } else {
+            reserveBar.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    observer.observe(hero);
+  }
+
   // ── Init All ──
   document.addEventListener("DOMContentLoaded", function () {
     initHero();
@@ -323,5 +348,6 @@
     initMobileNav();
     initImageBand();
     initSparkle();
+    initMobileReserve();
   });
 })();

@@ -1444,6 +1444,12 @@ details[open] .faq-icon::after {
   background: rgba(14, 12, 10, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  transform: translateY(100%);
+  transition: transform 0.5s var(--ease-out-expo);
+}
+
+.mobile-reserve.visible {
+  transform: translateY(0);
 }
 
 .mobile-reserve-btn {
