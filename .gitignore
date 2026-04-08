@@ -2,3 +2,8 @@
 *.DS_Store
 .env
 node_modules/
+Screenshot*
+*.png.bak
+# Keep video in images/video/ but ignore source files in root
+/mural*
+/*.mp4
