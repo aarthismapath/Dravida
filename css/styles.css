@@ -496,8 +496,6 @@ a:focus-visible {
   filter: none;
   opacity: 1;
   height: clamp(120px, 22vw, 240px);
-  background-color: transparent;
-  mix-blend-mode: screen;
 }
 
 .hero-location {
