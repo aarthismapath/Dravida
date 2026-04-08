@@ -1715,6 +1715,7 @@ details[open] .faq-icon::after {
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 /* Floral ornament */
@@ -2243,7 +2244,15 @@ details[open] .faq-icon::after {
   }
 
   .footer-closing {
-    padding: var(--space-lg) var(--space-sm) var(--space-md);
+    padding: var(--space-lg) var(--space-sm) calc(var(--space-xl) + 80px);
+  }
+
+  .footer-closing-inner {
+    max-width: none;
+  }
+
+  .footer-closing-phrase {
+    font-size: 1.125rem;
   }
 
   .mobile-reserve {
