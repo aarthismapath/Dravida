@@ -259,37 +259,67 @@
       </div>
     </section>
 
-    <!-- Gallery Section — Immersive mosaic -->
+    <!-- Gallery Section -->
     <section id="gallery" class="section section-gallery">
       <div class="container">
-        <p class="section-label reveal">The Space</p>
-        <h2 class="section-title reveal">Gallery</h2>
-        <p class="gallery-intro reveal">Every detail is intentional&mdash;an atmosphere crafted to transport you.</p>
+        <div class="gallery-header reveal">
+          <p class="section-label">The Space</p>
+          <h2 class="section-title">Gallery</h2>
+          <div class="gallery-ornament" aria-hidden="true">
+            <span class="gallery-ornament-line"></span>
+            <span class="gallery-ornament-diamond"></span>
+            <span class="gallery-ornament-line"></span>
+          </div>
+          <p class="gallery-intro">Every detail is intentional&mdash;an atmosphere crafted to transport you.</p>
+        </div>
       </div>
-      <div class="gallery-mosaic">
-        <figure class="gallery-cell gallery-cell--wide reveal">
+      <div class="gallery-grid">
+        <!-- Row 1: Hero wide image -->
+        <figure class="gallery-item gallery-item--hero reveal">
           <img src="images/gallery/chandeliers-dining.jpeg" alt="Coconut shell chandeliers above dining tables" loading="lazy">
-          <figcaption class="gallery-caption">The Chandeliers</figcaption>
+          <figcaption class="gallery-caption">
+            <span class="gallery-caption-label">Interior</span>
+            <span class="gallery-caption-title">The Chandeliers</span>
+          </figcaption>
         </figure>
-        <figure class="gallery-cell gallery-cell--tall reveal">
-          <img src="images/gallery/signage-outdoor.jpeg" alt="Dravida outdoor signage in gold" loading="lazy">
-          <figcaption class="gallery-caption">The Signage</figcaption>
-        </figure>
-        <figure class="gallery-cell reveal">
+
+        <!-- Row 2: Three equal columns -->
+        <figure class="gallery-item reveal">
           <img src="images/gallery/booth-seating.jpeg" alt="Cozy leather booth with warm lantern light" loading="lazy">
-          <figcaption class="gallery-caption">The Booth</figcaption>
+          <figcaption class="gallery-caption">
+            <span class="gallery-caption-label">Seating</span>
+            <span class="gallery-caption-title">The Booth</span>
+          </figcaption>
         </figure>
-        <figure class="gallery-cell reveal">
+        <figure class="gallery-item reveal">
+          <img src="images/gallery/signage-outdoor.jpeg" alt="Dravida outdoor signage in gold" loading="lazy">
+          <figcaption class="gallery-caption">
+            <span class="gallery-caption-label">Exterior</span>
+            <span class="gallery-caption-title">The Signage</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
           <img src="images/gallery/private-bar.jpeg" alt="Private bar with pendant lamps and art" loading="lazy">
-          <figcaption class="gallery-caption">The Lounge</figcaption>
+          <figcaption class="gallery-caption">
+            <span class="gallery-caption-label">Bar</span>
+            <span class="gallery-caption-title">The Lounge</span>
+          </figcaption>
         </figure>
-        <figure class="gallery-cell gallery-cell--wide reveal">
+
+        <!-- Row 3: Two images, asymmetric -->
+        <figure class="gallery-item gallery-item--wide reveal">
           <img src="images/gallery/spice-mural.jpeg" alt="Hand-painted spice mural with leather banquette" loading="lazy">
-          <figcaption class="gallery-caption">The Spice Mural</figcaption>
+          <figcaption class="gallery-caption">
+            <span class="gallery-caption-label">Art</span>
+            <span class="gallery-caption-title">The Spice Mural</span>
+          </figcaption>
         </figure>
-        <figure class="gallery-cell gallery-cell--tall reveal">
+        <figure class="gallery-item reveal">
           <img src="images/gallery/window-street.jpeg" alt="Dravida window lettering with NYC street reflection" loading="lazy">
-          <figcaption class="gallery-caption">East Village</figcaption>
+          <figcaption class="gallery-caption">
+            <span class="gallery-caption-label">Street</span>
+            <span class="gallery-caption-title">East Village</span>
+          </figcaption>
         </figure>
       </div>
     </section>
@@ -395,8 +425,11 @@
     <!-- FAQ Section -->
     <section id="faq" class="section section-faq">
       <div class="container">
-        <p class="section-label reveal">Common Questions</p>
-        <h2 class="section-title reveal">FAQs</h2>
+        <div class="faq-header reveal">
+          <p class="section-label">Common Questions</p>
+          <h2 class="section-title">FAQs</h2>
+          <p class="faq-intro">Everything you need to know before your visit.</p>
+        </div>
         <div class="faq-list">
 
           <details class="faq-item reveal">
