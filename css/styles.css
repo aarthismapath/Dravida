@@ -727,9 +727,9 @@ a:focus-visible {
   background: linear-gradient(
     175deg,
     var(--color-charcoal) 0%,
-    #1A2E1A 30%,
-    #172816 50%,
-    #1A2E1A 70%,
+    #1E2420 30%,
+    #1A201C 50%,
+    #1E2420 70%,
     var(--color-charcoal) 100%
   );
   color: var(--color-cream);
@@ -2404,7 +2404,7 @@ details[open] .faq-icon::after {
 
   /* Add bottom padding to body to account for sticky reserve bar */
   body {
-    padding-bottom: 80px;
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
   }
 
   .band-img {
