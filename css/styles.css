@@ -758,92 +758,89 @@ a:focus-visible {
   line-height: 1.8;
 }
 
-/* Showcase container */
-.menu-showcase {
-  max-width: 700px;
+/* Menu card — resembles the printed PDF menu */
+.menu-card {
+  max-width: 960px;
   margin: 0 auto;
-  padding: var(--space-lg) var(--space-lg);
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(42, 68, 40, 0.25);
+  padding: var(--space-xl) var(--space-lg);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(194, 120, 50, 0.15);
   position: relative;
 }
 
 /* Corner accents */
-.menu-showcase::before,
-.menu-showcase::after {
+.menu-card::before,
+.menu-card::after {
   content: "";
   position: absolute;
-  width: 24px;
-  height: 24px;
-  border-color: var(--color-forest-light);
+  width: 32px;
+  height: 32px;
+  border-color: var(--color-gold);
   border-style: solid;
-  opacity: 0.4;
+  opacity: 0.25;
 }
 
-.menu-showcase::before {
+.menu-card::before {
   top: -1px;
   left: -1px;
   border-width: 1px 0 0 1px;
 }
 
-.menu-showcase::after {
+.menu-card::after {
   bottom: -1px;
   right: -1px;
   border-width: 0 1px 1px 0;
 }
 
-/* Ornament dividers */
-.menu-ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-sm);
-  padding: var(--space-md) 0;
-}
-
-.menu-ornament-line {
-  width: 60px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-forest-light), transparent);
-  opacity: 0.5;
-}
-
-.menu-ornament-diamond {
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-forest-light);
-  transform: rotate(45deg);
-  opacity: 0.6;
-  flex-shrink: 0;
-}
-
-/* Menu sections — Indian diaspora */
-.menu-section {
-  padding: var(--space-xl) 0;
+/* Two-column grid matching the PDF layout */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--space-xl);
   position: relative;
+}
+
+/* Vertical divider between columns */
+.menu-grid::after {
+  content: "";
+  position: absolute;
+  top: var(--space-md);
+  bottom: var(--space-md);
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(194, 120, 50, 0.15) 15%,
+    rgba(194, 120, 50, 0.15) 85%,
+    transparent
+  );
+}
+
+.menu-col {
+  min-width: 0;
+}
+
+/* Menu sections */
+.menu-section {
+  padding: 0 0 var(--space-lg);
+  position: relative;
+}
+
+.menu-section:last-child {
+  padding-bottom: 0;
 }
 
 .menu-section-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 2.8vw, 1.85rem);
-  font-weight: 300;
-  color: var(--color-cream);
-  text-align: center;
-  letter-spacing: 0.1em;
-  margin-bottom: var(--space-lg);
-  position: relative;
-  padding-bottom: var(--space-md);
-}
-
-/* Kolam-inspired dot pattern under section titles */
-.menu-section-title::after {
-  content: "· · ·";
-  display: block;
-  font-size: 1.25rem;
-  letter-spacing: 0.5em;
-  color: var(--color-gold);
-  opacity: 0.4;
-  margin-top: 0.5rem;
+  font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+  font-weight: 400;
+  color: #C44536;
+  text-align: left;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-md);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(196, 69, 54, 0.2);
 }
 
 .menu-items {
@@ -853,118 +850,107 @@ a:focus-visible {
 }
 
 .menu-item {
-  padding: 1rem var(--space-md);
+  padding: 0.75rem 0;
   position: relative;
-  border-bottom: 1px solid rgba(194, 120, 50, 0.06);
-  transition: background 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .menu-item:last-child {
   border-bottom: none;
 }
 
-.menu-item:hover {
-  background: rgba(194, 120, 50, 0.04);
-}
-
-.menu-item-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-sm);
-  margin-bottom: 0.4rem;
-  flex-wrap: wrap;
-}
-
 .menu-item-name {
   font-family: var(--font-heading);
-  font-size: clamp(1.1rem, 1.8vw, 1.25rem);
-  font-weight: 500;
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  font-weight: 600;
   color: var(--color-cream);
-  letter-spacing: 0.02em;
-  flex: 1;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
 }
 
-/* Dotted line connecting name to influence — like a thali menu */
-.menu-item-header::after {
-  content: "";
-  flex: 1;
-  min-width: 20px;
-  height: 1px;
-  background: radial-gradient(circle, var(--color-gold) 1px, transparent 1px);
-  background-size: 6px 1px;
-  opacity: 0.2;
-  align-self: center;
-  order: 1;
-}
-
-.menu-item-name {
-  order: 0;
-}
-
-.menu-item-influence {
-  order: 2;
-  font-family: var(--font-body);
-  font-size: 0.5625rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  opacity: 0.7;
-  white-space: nowrap;
-  flex-shrink: 0;
+/* Dietary icons inline with dish name */
+.menu-diet {
+  font-size: 0.75em;
+  opacity: 0.6;
+  vertical-align: middle;
+  margin-left: 0.15em;
 }
 
 .menu-item-desc {
-  font-family: var(--font-heading);
-  font-size: 0.9375rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
   font-weight: 300;
-  font-style: italic;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--color-light);
-  opacity: 0.5;
+  opacity: 0.6;
+}
+
+.menu-item-influence {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--color-light);
+  opacity: 0.45;
+  margin-top: 0.2rem;
 }
 
 .menu-item-story {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 0.8125rem;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--color-gold);
   opacity: 0.5;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 
-/* Divider between sections — rangoli-inspired */
-.menu-section-divider {
+/* Desserts — full width centered, like the PDF */
+.menu-section--desserts {
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(194, 120, 50, 0.1);
+  margin-top: var(--space-md);
+}
+
+.menu-section--desserts .menu-section-title {
+  text-align: center;
+}
+
+.menu-section--desserts .menu-items {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.menu-section--desserts .menu-item {
+  text-align: center;
+}
+
+/* Dietary legend at bottom — matching PDF footer */
+.menu-legend {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding-top: var(--space-lg);
+  margin-top: var(--space-md);
+  border-top: 1px solid rgba(194, 120, 50, 0.1);
+}
+
+.menu-legend-item {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-light);
+  opacity: 0.5;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: var(--space-md) 0;
+  gap: 0.35rem;
 }
 
-.menu-section-divider::before,
-.menu-section-divider::after {
-  content: "";
-  width: 50px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-gold));
-  opacity: 0.15;
-}
-
-.menu-section-divider::after {
-  background: linear-gradient(90deg, var(--color-gold), transparent);
-}
-
-.menu-waypoint {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--color-gold);
-  opacity: 0.25;
-  flex-shrink: 0;
+.menu-legend-item .menu-diet {
+  font-size: 1em;
+  opacity: 0.8;
 }
 
 /* Footer area */
@@ -2139,8 +2125,8 @@ details[open] .faq-icon::after {
     display: none;
   }
 
-  .menu-showcase {
-    padding: var(--space-md);
+  .menu-card {
+    padding: var(--space-lg) var(--space-md);
   }
 
   .gallery-grid {
@@ -2306,41 +2292,43 @@ details[open] .faq-icon::after {
     font-size: 0.6875rem;
   }
 
-  .menu-showcase {
-    padding: var(--space-sm);
+  .menu-card {
+    padding: var(--space-md) var(--space-sm);
     border: none;
     background: none;
   }
 
-  .menu-showcase::before,
-  .menu-showcase::after {
+  .menu-card::before,
+  .menu-card::after {
+    display: none;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .menu-grid::after {
     display: none;
   }
 
   .menu-item {
-    padding: 0.75rem var(--space-xs);
-  }
-
-  .menu-item-header {
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-
-  .menu-item-header::after {
-    display: none;
-  }
-
-  .menu-item-influence {
-    order: 0;
-    align-self: flex-start;
-  }
-
-  .menu-item-name {
-    order: 0;
+    padding: 0.65rem 0;
   }
 
   .menu-section-title {
-    margin-bottom: var(--space-md);
+    text-align: center;
+    margin-bottom: var(--space-sm);
+    font-size: 1.4rem;
+  }
+
+  .menu-section--desserts .menu-items {
+    max-width: 100%;
+  }
+
+  .menu-legend {
+    flex-wrap: wrap;
+    gap: var(--space-md);
   }
 
   .gallery-grid {
