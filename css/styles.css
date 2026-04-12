@@ -728,14 +728,8 @@ a:focus-visible {
   background: linear-gradient(
     180deg,
     var(--color-charcoal) 0%,
-    #3D3024 5%,
-    #6B5840 9%,
-    #D4C4A8 13%,
-    #F5EDE0 17%,
-    #F5EDE0 85%,
-    #D4C4A8 89%,
-    #6B5840 93%,
-    #3D3024 96%,
+    #F5EDE0 4%,
+    #F5EDE0 96%,
     var(--color-charcoal) 100%
   );
   color: var(--color-cream);
@@ -952,23 +946,23 @@ a:focus-visible {
 
 .menu-note {
   font-size: 0.8125rem;
-  color: var(--color-muted);
+  color: #5A3A2A;
   font-style: italic;
   max-width: 500px;
 }
 
 .btn-menu-cta {
-  background: transparent;
-  color: var(--color-cream);
-  border: 1px solid rgba(42, 68, 40, 0.5);
+  background: #8B1A2B;
+  color: #F5EDE0;
+  border: 1px solid #8B1A2B;
   letter-spacing: 0.15em;
   transition: all var(--duration-fast) ease;
 }
 
 .btn-menu-cta:hover {
-  background-color: var(--color-forest-light);
-  border-color: var(--color-forest-light);
-  color: var(--color-cream);
+  background-color: #6B1420;
+  border-color: #6B1420;
+  color: #F5EDE0;
   opacity: 1;
 }
 
