@@ -856,24 +856,24 @@ a:focus-visible {
   opacity: 0.55;
 }
 
-/* Celiac — crossed wheat/X in circle */
+/* Celiac — wheat stalk with X through it */
 .menu-diet--celiac {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A3A2A' stroke-width='1.5'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='7' y1='7' x2='17' y2='17'/%3E%3Cline x1='17' y1='7' x2='7' y2='17'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A3A2A' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10.5'/%3E%3Cpath d='M12 18V8'/%3E%3Cpath d='M12 8L9 5'/%3E%3Cpath d='M12 8L15 5'/%3E%3Cpath d='M12 11L9.5 8.5'/%3E%3Cpath d='M12 11L14.5 8.5'/%3E%3Cpath d='M12 14L10 12'/%3E%3Cpath d='M12 14L14 12'/%3E%3Cline x1='5' y1='5' x2='19' y2='19' stroke-width='1.8'/%3E%3C/svg%3E");
 }
 
-/* Vegetarian — leaf in circle */
+/* Vegetarian — leaf with stem */
 .menu-diet--veg {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A3A2A' stroke-width='1.5'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 18c0-6 5-10 5-10s-4 0-5 3c-1-3-5-3-5-3s5 4 5 10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A3A2A' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10.5'/%3E%3Cpath d='M7 17c0-7 3-10 5-11 2 1 5 4 5 11'/%3E%3Cpath d='M12 17V9'/%3E%3Cpath d='M9 13c1.5-1 2.5-1 3-1'/%3E%3Cpath d='M15 11c-1.5 1-2.5 1-3 1'/%3E%3C/svg%3E");
 }
 
-/* Seafood — shrimp in circle */
+/* Seafood — fish silhouette */
 .menu-diet--seafood {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A3A2A' stroke-width='1.5'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M16 8c0 0-1 4-4 5s-5 2-5 2' stroke-linecap='round'/%3E%3Cpath d='M16 8c-2-1-4 0-4 0' stroke-linecap='round'/%3E%3Cpath d='M9 15c0 1 1 2 2 1' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A3A2A' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10.5'/%3E%3Cpath d='M5.5 12c2-3 5-4.5 9-4.5C13 9 12.5 10.5 12.5 12s.5 3 2 4.5c-4 0-7-1.5-9-4.5z'/%3E%3Cpath d='M17.5 8.5c-1 1-1 2.5 0 3.5 1-1 1-2.5 0-3.5z' transform='translate(0 1)'/%3E%3Ccircle cx='8' cy='11.5' r='0.7' fill='%235A3A2A' stroke='none'/%3E%3C/svg%3E");
 }
 
-/* Peanut — peanut shape in circle */
+/* Peanut — peanut shell shape */
 .menu-diet--peanut {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A3A2A' stroke-width='1.5'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cellipse cx='12' cy='9' rx='2.5' ry='3'/%3E%3Cellipse cx='12' cy='15.5' rx='2.5' ry='3'/%3E%3Cline x1='9.5' y1='12' x2='14.5' y2='12'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A3A2A' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10.5'/%3E%3Cpath d='M12 6c-2.2 0-3.5 1.5-3.5 3.2 0 1.2.6 1.8 1.2 2.3-.6.5-1.2 1.1-1.2 2.3C8.5 15.5 9.8 18 12 18s3.5-2.5 3.5-4.2c0-1.2-.6-1.8-1.2-2.3.6-.5 1.2-1.1 1.2-2.3C15.5 7.5 14.2 6 12 6z'/%3E%3Cpath d='M9 12h6'/%3E%3C/svg%3E");
 }
 
 .menu-item-desc {
